@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Krub:wght@200;300;400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  font-family: "Krub";
+}
+
+.blue {
+  background-color: #5abae6;
+}
+
+.red {
+  background-color: #d34e4e;
+}
+
+.green {
+  background-color: #9dbb19;
+}
+
+.yellow {
+  background-color: #f7b358;
+}
+
+header {
+  opacity: 0.7;
+  font-weight: 700;
+  z-index: 1;
+  position: fixed;
+  right: 20px;
+  top: 300px;
+}
+header h1 img {
+  height: 40px;
+  width: 50px;
+  margin-top: 5px;
+}
+header ul.menu li {
+  font-size: 20px;
+}
+header ul.menu li:hover a {
+  color: navy;
+}
+
+section#section1 {
+  background-color: #e9faff;
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+}
+section#section1 h1 img {
+  width: 650px;
+  height: 500px;
+  margin: 80px auto;
+  opacity: 0.3;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+section#section1 div.textavi {
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 350px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+section#section1 div.textavi h1 {
+  width: 400px;
+  font-size: 2.2rem;
+  margin: 0 auto;
+}
+section#section1 div.textavi h1::after {
+  content: "";
+  margin-left: 0.6rem;
+  animation: cursor 0.9s infinite steps(2);
+}
+@keyframes cursor {
+  from {
+    border-right: 2px solid #222;
+  }
+  to {
+    border-right: 2px solid none;
+  }
+}
+section#section1 div.btn a.scrollbtn {
+  width: 30px;
+  height: 60px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border: 2px solid black;
+}
+section#section1 div.btn a.scrollbtn div {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  animation-name: scrollball;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes scrollball {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+section#section2 {
+  height: 100vh;
+  display: flex;
+  width: 1300px;
+  margin: 0 auto;
+}
+section#section2 div.content {
+  padding-top: 100px;
+  padding-left: 100px;
+  width: 50%;
+  float: left;
+  padding-bottom: 100px;
+  height: 100%;
+}
+section#section2 div.content h1 {
+  font-size: 70px;
+  margin-left: -8px;
+}
+section#section2 div.content div.content_left {
+  float: left;
+}
+section#section2 div.content div.content_left img {
+  width: 150px;
+  height: 200px;
+  margin-right: 20px;
+}
+section#section2 div.content div.content_right {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 220px;
+  line-height: 2;
+}
+section#section2 div.content div.content_right p {
+  font-size: 15px;
+  font-weight: 700;
+}
+section#section2 div.content div.text_bottom {
+  width: 500px;
+  position: absolute;
+  top: 220px;
+  left: -180px;
+  border: 2px dotted black;
+  padding: 50px;
+}
+section#section2 div.content div.text_bottom h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+section#section2 div.content div.text_bottom h4 span {
+  font-weight: 900;
+}
+section#section2 div.skill {
+  padding-top: 100px;
+  padding-right: 100px;
+  width: 50%;
+  padding-bottom: 100px;
+  height: 100%;
+  position: relative;
+}
+section#section2 div.skill h1.skill {
+  font-size: 70px;
+}
+section#section2 div.skill div.web_skill {
+  width: 500px;
+}
+section#section2 div.skill div.web_skill p {
+  font-size: 20px;
+  font-weight: 700;
+}
+section#section2 div.skill div.web_skill p:not(:nth-child(1)) {
+  margin-top: -20px;
+}
+section#section2 div.skill div.web_skill span {
+  display: block;
+  margin: 0;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  border-radius: 15px;
+}
+section#section2 div.skill div.andskill {
+  margin-top: 50px;
+}
+section#section2 div.skill div.andskill h1 {
+  font-size: 26px;
+}
+section#section2 div.skill div.andskill ul {
+  display: flex;
+  gap: 10px;
+}
+section#section2 div.skill div.andskill ul li {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+section#section2 div.skill div.andskill ul li img {
+  width: 60px;
+}
+
+section#portfolio {
+  height: 100vh;
+  width: 1200px;
+  margin: 0 auto;
+}
+section#portfolio h1 {
+  width: 200px;
+  font-size: 70px;
+  padding-top: 80px;
+  margin-left: 40%;
+}
+section#portfolio div.wrap {
+  padding: 30px;
+}
+section#portfolio div.wrap div.tab_menu {
+  position: relative;
+}
+section#portfolio div.wrap div.tab_menu ul.list {
+  overflow: hidden;
+  display: flex;
+  line-height: 50px;
+  width: 90%;
+  margin: 0 auto;
+}
+section#portfolio div.wrap div.tab_menu ul.list li {
+  margin-left: 14px;
+}
+section#portfolio div.wrap div.tab_menu ul.list li.is_on a.btn {
+  font-weight: bold;
+  background-color: #5abae6;
+  color: #fff;
+  padding: 5px 10px;
+}
+section#portfolio div.wrap div.tab_menu ul.list li.is_on .cont {
+  display: block;
+}
+section#portfolio div.wrap div.tab_menu ul.list li:after {
+  content: " |";
+}
+section#portfolio div.wrap div.tab_menu ul.list a.btn {
+  font-size: 22px;
+  border-radius: 5px;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  color: #333;
+  width: 100%;
+  height: 60vh;
+  line-height: 1.2;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont div.left_cont {
+  width: 50%;
+  float: left;
+  padding: 50px;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont div.left_cont h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont div.left_cont p {
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 500;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont div.left_cont div {
+  margin-top: 20px;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont div.left_cont div p {
+  font-size: 17px;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont div.left_cont div.deep {
+  display: flex;
+  gap: 20px;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont div.left_cont div.deep a {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont div.left_cont div.deep a:hover {
+  background-color: #3b4e56;
+  color: #fff;
+  transition: 0.5s;
+  border: none;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont div.right_cont {
+  padding-left: 30px;
+  padding-bottom: 50px;
+}
+section#portfolio div.wrap div.tab_menu ul.list div.cont div.right_cont img {
+  width: 500px;
+  height: 400px;
+}
+
+div#design {
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+}
+div#design h1 {
+  font-size: 70px;
+  width: 500px;
+  margin-left: 40%;
+}
+div#design div.swiper {
+  width: 1100px;
+  height: 85vh;
+  padding: 20px;
+  outline: 1px solid blue;
+}
+div#design div.swiper div.swiper-wrapper div.swiper-slide {
+  width: 1100px;
+  outline: 1px solid blue;
+}
+div#design div.swiper div.swiper-wrapper div.swiper-slide div.inner ul.bigbn {
+  display: flex;
+  gap: 30px;
+}
+div#design div.swiper div.swiper-wrapper div.swiper-slide div.inner ul.bigbn li {
+  width: 350px;
+  height: 350px;
+  outline: 1px solid blue;
+}
+div#design div.swiper div.swiper-wrapper div.swiper-slide div.inner ul.rowbn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+div#design div.swiper div.swiper-wrapper div.swiper-slide div.inner ul.rowbn li {
+  width: 530px;
+  height: 200px;
+  outline: 1px solid blue;
+}
+
+section#contect {
+  width: 100%;
+  height: 100%;
+}
+section#contect div.contect {
+  width: 1200px;
+  height: 80vh;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+section#contect div.contect h1 {
+  font-size: 70px;
+  margin-bottom: 60px;
+  margin-left: 40px;
+}
+section#contect div.contect p.bgtext {
+  position: absolute;
+  transform: rotate(90deg);
+  font-size: 140px;
+  font-weight: 900;
+  font-family: "Noto-Sans KR", sans-serif;
+  right: -30px;
+  opacity: 0.4;
+  top: 210px;
+  letter-spacing: -5px;
+  z-index: -1;
+}
+section#contect div.contect div.container {
+  margin-left: 200px;
+  display: flex;
+}
+section#contect div.contect div.container div.contents {
+  line-height: 1.8;
+}
+section#contect div.contect div.container div.contents h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+section#contect div.contect div.container div.contents ol li {
+  list-style: inside;
+}
+section#contect div.contect div.container div.contents div {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+section#contect div.contect div.container div.contents div p {
+  float: left;
+}
+section#contect div.contect div.container div.contents div::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+section#contect div.contect div.container div.contents a {
+  padding: 8px 50px;
+  border: 1px solid gray;
+  line-height: 40px;
+  justify-content: center;
+  border-radius: 10px;
+}
+section#contect div.contect div.container div.contents a:hover {
+  background-color: #3b4e56;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  transition: 0.5s;
+}
+section#contect div.contect div.container div.img {
+  width: 200px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #3b4e56;
+  margin-left: 100px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #3b4e56;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  padding-top: 30px;
+}
