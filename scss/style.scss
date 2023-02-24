@@ -11,12 +11,16 @@ html,body{
   scroll-behavior: smooth;
   font-family: 'Krub';
 }
+div#wrap{
+  width: 100%; height: 100%;
+}
 .blue{background-color: #5abae6;}
 .red{background-color: #d34e4e;}
 .green{background-color: #9dbb19;}
 .yellow{background-color: #f7b358;}
+.show .back-to-position.delay-1{transition-delay: .3s;}
 header{
-  opacity: .7; font-weight: 700; z-index: 1;position: fixed; right: 20px; top: 300px; 
+  opacity: .7; font-weight: 700; z-index: 1;position: fixed; right: 20px; top: 300px; z-index: 10;
   h1 img{
     height: 40px; width: 50px; margin-top: 5px;
   }
@@ -29,6 +33,48 @@ header{
     }
   }
 }
+
+
+.pop_wrap{
+  position: fixed; top: 0; left: 0;
+  padding: 30px; z-index: 10;width: 100%; height: 800px; 
+  box-sizing: border-box; display: none; background-color: rgba(0, 0, 0, .2);
+  &::after{
+    display: inline-block; height: 100%; vertical-align: middle; content: "";
+  }
+  div.pop_inner{
+    display: inline-block;vertical-align: middle; width: 800px; padding-left: 30%;
+    img{
+      width: 600px;
+    }
+  }
+}
+
+// div#popup{
+//   position: fixed; top: 50%;left: 50%;
+//   padding: 30px;
+//   box-sizing: border-box;
+//   transform: translate(-50%, -50%);
+// }
+// div#popup div.contents{
+//   height: 100%;
+//   ul{
+//     li{
+//       display: none;
+//       img{
+//         width: 800px;
+//       }
+//       &.show{
+//         display: block;
+//       }
+//     }
+//   }
+// }
+
+// div#popup div.contents button{
+//   width: 50px; height: 30px; position: absolute; right: 30px; bottom:30px;
+//   border: 1px solid gray; border-radius: 15px;
+// }
 section#section1{
   background-color: #e9faff;  width: 100%; z-index: 1; height: 100vh;
   h1{
@@ -82,12 +128,12 @@ section#section1{
   }
 }
 section#section2{
-  height: 100vh; display: flex; width: 1300px; margin: 0 auto; 
+  height: 700px; display: flex; width: 1300px; margin: 0 auto;
   div.content{
-    padding-top: 100px; padding-left: 100px; width:50%; float: left; padding-bottom: 100px;
-    height: 100%;
+    padding-top: 100px; padding-left: 50px; width:50%; float: left; padding-bottom: 100px;
+    height: 100%; 
     h1{
-      font-size: 70px;margin-left: -8px;
+      font-size: 50px;margin-left: -8px;
     }
     div.content_left{
       float: left; 
@@ -108,8 +154,8 @@ section#section2{
     }
     
     div.text_bottom{
-      width: 500px; position: absolute; top: 220px; left: -180px;
-      border: 2px dotted black; padding: 50px;
+      width: 500px; position: absolute; top: 250px; left: -180px;
+      border: 2px dotted black; padding: 50px; 
     h4{
       font-size: 18px; font-weight: 500;
       span{
@@ -119,10 +165,10 @@ section#section2{
     }
   }
   div.skill{
-    padding-top: 100px; padding-right: 100px; width:50%; padding-bottom: 100px;
-    height: 100%; position: relative;
+    padding-top: 100px; padding-left: 50px; width:50%; padding-bottom: 100px;
+    height: 100%; position: relative; line-height: 1.6;
     h1.skill{
-      font-size: 70px;
+      font-size: 50px;
     }
     div.web_skill{
       width: 500px; 
@@ -140,6 +186,7 @@ section#section2{
         line-height: 1;
         text-align: center;
         border-radius: 15px;
+        font-size: 20px;
       }
     }
     div.andskill{ 
@@ -147,7 +194,7 @@ section#section2{
       h1{
         font-size: 26px;
       }
-      ul{ display: flex; gap: 10px;
+      ul{ display: flex; gap: 20px;
         li{
           width: 60px; height: 60px; overflow: hidden;
           img{width: 60px;}
@@ -157,7 +204,7 @@ section#section2{
   }
 }
 section#portfolio{ 
-  height: 100vh; width: 1200px; margin: 0 auto;
+  height: 750px; width: 1200px; margin: 0 auto;
   h1{
     width:200px;
     font-size: 70px;
@@ -223,13 +270,15 @@ section#portfolio{
   }
 }
 div#design{
-  width: 1200px; height: 100vh; margin: 0 auto; position: relative;
+  width: 100%; height: 800px; margin: 0 auto; position: relative;
   box-sizing: border-box; 
+  
+
   h1{
     font-size: 70px; width: 500px; margin-left: 40%;
   }
   div.swiper{ 
-    width: 1100px; height: 85vh; padding: 20px; outline: 1px solid blue; 
+    width: 1100px; height: 610px; padding: 20px; outline: 1px solid blue; 
     div.swiper-wrapper{
       div.swiper-slide{ width: 1100px; outline: 1px solid blue;
         div.inner{
@@ -237,12 +286,33 @@ div#design{
             display: flex; gap: 30px;
             li{
               width: 350px; height: 350px; outline: 1px solid blue;
+              img{
+                width: 350px; height: 350px;
+              }
+              &:hover{
+                a{
+                  img{
+                    transition: .3s; filter: opacity(.3);
+                  }
+                }
+              }
             }
           }
           ul.rowbn{
             display: flex; justify-content: space-between; margin-top: 20px;
             li{
               width: 530px; height: 200px; outline: 1px solid blue;
+              img{
+                width: 530px; height: 200px;
+              }
+              &:hover {
+                width: 530PX; height: 200PX; overflow: hidden;
+                a{
+                  img{
+                    transform: scale(1.1); transition: .3s;filter: opacity(.3);
+                  }
+                }
+              }
             }
           }
         }
@@ -259,7 +329,7 @@ section#contect{
       font-size: 70px; margin-bottom: 60px; margin-left: 40px;
     }
     p.bgtext{
-      position: absolute; transform: rotate(90deg);font-size: 140px; font-weight: 900; font-family: 'Noto-Sans KR', sans-serif; right: -30px ; opacity: .4; top: 210px;letter-spacing: -5px;z-index: -1;
+      position: absolute; transform: rotate(90deg);font-size: 140px; font-weight: 900; font-family: 'Noto-Sans KR', sans-serif; right: -30px ; opacity: .2; top: 210px;letter-spacing: -5px;z-index: -1;
     }
     div.container{
       margin-left: 200px; display: flex;
@@ -274,7 +344,10 @@ section#contect{
         div{
           margin-top: 20px;
           p{
-            float: left;
+            float: left; 
+            &:first-child:after{
+              content: "|";margin-left: 10px; margin-right: 10px;
+            }
           }
           &::after{
             display: block; clear: both; content: "";
