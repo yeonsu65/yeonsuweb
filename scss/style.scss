@@ -79,10 +79,11 @@ header{
 //   border: 1px solid gray; border-radius: 15px;
 // }
 section#section1{
-  background-color: #e9faff;  width: 100%; z-index: 1; height: 100vh;
+  background-color: #e9faff;  width: 100%; z-index: 1; height: 100vh; position: relative; margin: 0 auto;
   h1{
     img{
-      width: 650px; height: 500px; margin: 80px auto; opacity: .3; position: absolute; left: 0; right: 0;
+      background-image: url(../img/sugook.png); background-position: center; width: 650px; height: 500px;
+      background-repeat: no-repeat; opacity: .3; position: absolute; left: 0; right: 0;
     }
   }
   // 타이핑 모션
@@ -93,7 +94,7 @@ section#section1{
     align-items: flex-end;
     font-size: 1.8rem;
     position: absolute;
-    top: 350px; right: 0; left: 0; margin: 0 auto;
+    top: 350px; left: 0; right: 0;
     h1 {
       width: 400px;
       font-size: 2.2rem;
