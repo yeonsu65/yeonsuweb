@@ -448,23 +448,23 @@ div#design div.swiper div.swiper-wrapper div.swiper-slide div.inner ul.rowbn li:
   filter: opacity(0.3);
 }
 
-section#contect {
+section#contact {
   width: 100%;
   height: 100%;
 }
-section#contect div.contect {
+section#contact div.contact {
   width: 1200px;
   height: 80vh;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
-section#contect div.contect h1 {
+section#contact div.contact h1 {
   font-size: 70px;
   margin-bottom: 60px;
   margin-left: 40px;
 }
-section#contect div.contect p.bgtext {
+section#contact div.contact p.bgtext {
   position: absolute;
   transform: rotate(90deg);
   font-size: 140px;
@@ -476,59 +476,59 @@ section#contect div.contect p.bgtext {
   letter-spacing: -5px;
   z-index: -1;
 }
-section#contect div.contect div.container {
+section#contact div.contact div.container {
   margin-left: 200px;
   display: flex;
 }
-section#contect div.contect div.container div.contents {
+section#contact div.contact div.container div.contents {
   line-height: 1.8;
 }
-section#contect div.contect div.container div.contents h3 {
+section#contact div.contact div.container div.contents h3 {
   font-size: 26px;
   margin-bottom: 10px;
 }
-section#contect div.contect div.container div.contents ol li {
+section#contact div.contact div.container div.contents ol li {
   list-style: inside;
 }
-section#contect div.contect div.container div.contents div {
+section#contact div.contact div.container div.contents div {
   margin-top: 20px;
   margin-bottom: 50px;
 }
-section#contect div.contect div.container div.contents div p {
+section#contact div.contact div.container div.contents div p {
   float: left;
 }
-section#contect div.contect div.container div.contents div p:first-child:after {
+section#contact div.contact div.container div.contents div p:first-child:after {
   content: "|";
   margin-left: 10px;
   margin-right: 10px;
 }
-section#contect div.contect div.container div.contents div::after {
+section#contact div.contact div.container div.contents div::after {
   display: block;
   clear: both;
   content: "";
 }
-section#contect div.contect div.container div.contents a {
+section#contact div.contact div.container div.contents a {
   padding: 8px 50px;
   border: 1px solid gray;
   line-height: 40px;
   justify-content: center;
   border-radius: 10px;
 }
-section#contect div.contect div.container div.contents a:hover {
+section#contact div.contact div.container div.contents a:hover {
   background-color: #3b4e56;
   color: #fff;
   font-weight: 700;
   border: none;
   transition: 0.5s;
 }
-section#contect div.contect div.container div.img {
+section#contact div.contact div.container div.img {
   width: 220px;
   height: 250px;
   border-radius: 50%;
   margin-left: 100px;
   overflow: hidden;
 }
-section#contect div.contect div.container div.img img {
+section#contact div.contact div.container div.img img {
   width: 220px;
   height: 250px;
 }

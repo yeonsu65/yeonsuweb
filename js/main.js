@@ -122,3 +122,10 @@ for(var j = 0; j < target.length; j++){
     this.style.display = 'none';
   });
 }
+
+$('a').click(function () {
+  $('html, body').animate({
+    scrollTop: $($.attr(this, 'href')).offset().top
+  }, 500);
+  return false;
+});
